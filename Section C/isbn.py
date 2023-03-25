@@ -1,8 +1,3 @@
-# This is a sample Python script.
-
-# Press ⌃R to execute it or replace it with your code.
-# Press Double ⇧ to search everywhere for classes, files, tool windows, actions, and settings.
-
 import numpy as np
 
 def isbn13(isbn):
@@ -49,7 +44,6 @@ def stringIsbn13(isbn13):
     newisbn = [str(x) for x in list(isbn13)]
     return "".join(newisbn)
 
-# Press the green button in the gutter to run the script.
 if __name__ == '__main__':
     print("Working.")
     output = isbn13("0316066524")
