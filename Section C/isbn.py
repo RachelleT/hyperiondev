@@ -32,10 +32,10 @@ def isbn13(isbn):
             return "invalid"
         return "valid"
 
-def checkIsbn13(isbn):
-    # accepts isbn and returns the results of the isbn13 calculation
+def checkIsbn13(isbn13):
+    # accepts isbn13 and returns the results of the isbn13 calculation
     isbn13code = [1, 3, 1, 3, 1, 3, 1, 3, 1, 3, 1, 3, 1]
-    isbn13sum = sum(list(np.multiply(isbn, isbn13code)))
+    isbn13sum = sum(list(np.multiply(isbn13, isbn13code)))
     result = isbn13sum % 10
     return [isbn13sum, result]
 
@@ -46,7 +46,8 @@ def stringIsbn13(isbn13):
 
 if __name__ == '__main__':
     print("Working.")
-    output = isbn13("0316066524")
+    isbn = input("Enter an ISBN: ")
+    output = isbn13(isbn)
     print(output)
 
 
